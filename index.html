@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <video id = "page-loader" class="video-js" loop autoplay preload="auto" muted defaultMuted playsinline  concontextmenu="return false;"  preload="auto" >
+        <source src="egan_video2.mp4" type="video/mp4">
+    </video>
+
+
+    <div class = "gif" id = "gif">
+       <img src = "gifloader.gif" />
+    </div>
+
+    
+</body>
+
+
+<script>
+
+const page_loader = document.getElementById("page-loader")
+
+setTimeout(function() { 
+let page_gif_loader = document.getElementById("gif");
+let page_video_loader = document.getElementById("page-loader")
+    page_gif_loader.classList.add("fade-out");
+    page_video_loader.classList.add("fade-out");
+},8000)
+
+
+</script>
+<style>
+
+    @media only screen and (max-with:750px) { 
+        .gif { 
+        display: block;
+        height: 100vh;
+        position: fixed;
+        z-index: 2;
+        background-position: center center;
+
+
+    }
+    .gif img { 
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        background-position: center center;
+    }
+
+    }
+
+    .gif {
+        display: none;
+    }
+
+
+           #page-loader { 
+        display: block;
+        height: 100vh;
+        position: fixed;
+        z-index: 2;
+        top:0;
+        left:0;
+
+    }
+    #page-loader img { 
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+    .fade-out { 
+    opacity: 0% !important;
+    transition: opacity 1000ms ease; 
+    z-index: -1 !important;
+ 
+
+}
+
+
+
+</style>
+</html>
